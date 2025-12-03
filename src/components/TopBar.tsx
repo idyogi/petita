@@ -1,12 +1,33 @@
-import { Search, Ticket, Puzzle, PenTool, Smile } from 'lucide-react';
+import { Puzzle, Ticket, PenTool, Smile, Search, Download } from 'lucide-react';
 import { Button } from './Button';
+import { useState, useEffect } from 'react';
 
 export function TopBar() {
+    const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+
+    useEffect(() => {
+        const handler = (e: any) => {
+            e.preventDefault();
+            setDeferredPrompt(e);
+        };
+        window.addEventListener('beforeinstallprompt', handler);
+        return () => window.removeEventListener('beforeinstallprompt', handler);
+    }, []);
+
+    const handleInstallClick = async () => {
+        if (!deferredPrompt) return;
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+            setDeferredPrompt(null);
+        }
+    };
+
     return (
-        <div className="flex items-center justify-between px-4 py-2 bg-kids-bg sticky top-0 z-50">
-            <div className="flex items-center gap-4 overflow-x-auto no-scrollbar py-2">
-                {/* Avatar/Profile */}
-                <div className="w-12 h-12 rounded-full bg-white p-1 flex-shrink-0 border-2 border-white overflow-hidden">
+        <div className="p-4 flex items-center justify-between sticky top-0 z-30 bg-[#E91E63] shadow-xl">
+            {/* Profile & Logo */}
+            <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-white border-2 border-white overflow-hidden">
                     <img src="/logo.jpg" alt="Profile" className="w-full h-full object-cover" />
                 </div>
 
@@ -20,6 +41,16 @@ export function TopBar() {
             </div>
 
             <div className="flex items-center gap-3 flex-shrink-0 ml-4">
+                {deferredPrompt && (
+                    <Button
+                        variant="primary"
+                        onClick={handleInstallClick}
+                        className="bg-green-500 hover:bg-green-600 text-white border-2 border-white/20 shadow-[0_4px_0_0_rgba(0,0,0,0.2)]"
+                    >
+                        <Download className="w-5 h-5 mr-2" />
+                        Install App
+                    </Button>
+                )}
                 <Button variant="primary" className="bg-[#5C6BC0] hover:bg-[#3F51B5] text-white border-2 border-white/20 shadow-[0_4px_0_0_rgba(0,0,0,0.2)]">
                     Langganan ✨
                 </Button>
