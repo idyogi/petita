@@ -1,0 +1,125 @@
+{
+    "categories": [
+        {
+            "title": "Kisah Nabi & Rasul",
+            "videos": [
+                {
+                    "id": "1",
+                    "title": "Raja Abrahah",
+                    "duration": "03:02",
+                    "color": "bg-teal-400",
+                    "category": "Kisah Nabi",
+                    "thumbnailImage": "/thumbnail.jpg",
+                    "isLocked": false,
+                    "tags": [
+                        "Sejarah",
+                        "Iman"
+                    ],
+                    "subtitle": "Bismillah, ayo kita mulai dengan doa!",
+                    "videoUrl": "/video.mp4"
+                },
+                {
+                    "id": "2",
+                    "title": "Kelahiran Muhammad",
+                    "duration": "06:01",
+                    "color": "bg-slate-400",
+                    "category": "Kisah Nabi",
+                    "thumbnailImage": "/thumbnail2.jpg",
+                    "isLocked": true,
+                    "tags": [
+                        "Sabar",
+                        "Iman"
+                    ],
+                    "subtitle": "Kesabaran adalah kunci kesuksesan.",
+                    "videoUrl": "/video2.mp4"
+                },
+                {
+                    "id": "3",
+                    "title": "Nabi Yunus di Perut Ikan",
+                    "duration": "02:53",
+                    "color": "bg-indigo-400",
+                    "category": "Kisah Nabi",
+                    "thumbnailImage": "/thumbnail.jpg",
+                    "isLocked": true,
+                    "tags": [
+                        "Taubat",
+                        "Doa"
+                    ],
+                    "subtitle": "Jangan lupa berdoa kepada Allah.",
+                    "videoUrl": "/video.mp4"
+                },
+                {
+                    "id": "4",
+                    "title": "Keberanian Nabi Musa",
+                    "duration": "04:15",
+                    "color": "bg-orange-400",
+                    "category": "Kisah Nabi",
+                    "thumbnailImage": "/thumbnail.jpg",
+                    "isLocked": false,
+                    "tags": [
+                        "Berani",
+                        "Pemimpin"
+                    ],
+                    "subtitle": "Berani karena benar!",
+                    "videoUrl": "/video.mp4"
+                }
+            ]
+        },
+        {
+            "title": "Akhlaq Mulia",
+            "videos": [
+                {
+                    "id": "5",
+                    "title": "Adab Makan & Minum",
+                    "duration": "02:31",
+                    "color": "bg-blue-400",
+                    "category": "Akhlaq",
+                    "thumbnailImage": "/thumbnail.jpg",
+                    "isLocked": true,
+                    "tags": [
+                        "Adab",
+                        "Sehari-hari"
+                    ],
+                    "subtitle": "Makan dengan tangan kanan ya!",
+                    "videoUrl": "/video.mp4"
+                },
+                {
+                    "id": "6",
+                    "title": "Menghormati Orang Tua",
+                    "duration": "05:20",
+                    "color": "bg-pink-400",
+                    "category": "Akhlaq",
+                    "thumbnailImage": "/thumbnail.jpg",
+                    "isLocked": false,
+                    "tags": [
+                        "Hormat",
+                        "Keluarga"
+                    ],
+                    "subtitle": "Sayangi orang tuamu.",
+                    "videoUrl": "/video.mp4"
+                },
+                {
+                    "id": "7",
+                    "title": "Belajar Berbagi",
+                    "duration": "03:45",
+                    "color": "bg-yellow-400",
+                    "category": "Akhlaq",
+                    "thumbnailImage": "/thumbnail.jpg",
+                    "isLocked": true,
+                    "tags": [
+                        "Berbagi",
+                        "Teman"
+                    ],
+                    "subtitle": "Berbagi itu indah.",
+                    "videoUrl": "/video.mp4"
+                }
+            ]
+        }
+    ],
+    "relatedVideos": [
+        "5",
+        "6",
+        "7",
+        "4"
+    ]
+}
